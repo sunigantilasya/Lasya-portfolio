@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact Us</title>
+
+    <style>
+        
+        body{
+margin:0;
+font-family: Arial, sans-serif;
+background:#d4edda;
+}
+nav{
+background:#1f6f4a;
+padding:15px;
+text-align:center;
+}
+nav a{
+color:white;
+text-decoration:none;
+margin:15px;
+font-size:18px;
+padding:8px 15px;
+border-radius:5px;
+transition:0.3s;
+}
+
+nav a:hover{
+background:white;
+color:#2e8b57;
+}
+.header{
+text-align:center;
+padding:40px;
+background:#2e8b57;
+}
+
+.header h1{
+margin:0;
+font-size:40px;
+}
+
+.container{
+display:flex;
+justify-content:center;
+gap:40px;
+padding:40px;
+flex-wrap:wrap;
+}
+
+.contact-info,.contact-form{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+width:400px;
+}
+
+h2{
+color:#2e8b57;
+margin-top:0;
+}
+
+.contact{
+width:60%;
+margin:40px auto;
+font-family: Arial, sans-serif;
+}
+
+.contact label{
+display:block;
+margin-top:15px;
+font-weight:bold;
+}
+
+.contact input,.contact textarea{
+width:100%;
+padding:12px;
+margin-top:8px;
+border:2px solid #ccc;
+border-radius:6px;
+font-size:16px;
+box-sizing:border-box;
+}
+
+.contact textarea{
+height:120px;
+resize:vertical;
+}
+
+.contact input:focus,
+.contact textarea:focus{
+border-color:#1b6e3c;
+outline:none;
+}
+
+.contact button{
+margin-top:20px;
+padding:12px;
+width:100%;
+background:#1b6e3c;
+color:white;
+border:none;
+border-radius:6px;
+font-size:16px;
+cursor:pointer;
+}
+
+.contact button:hover{
+background:#14532d;
+}
+
+#charCount{
+font-size:14px;
+color:gray;
+margin-top:5px;
+}
+
+footer{
+background:#2e8b57;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+    </style>
+</head>
+<body>
+<nav>
+<a href="indexpage.html">Home</a>
+<a href="about.html">About</a>
+<a href="yogaposes.html">Yoga Poses</a>
+<a href="benefits.html">Benefits</a>
+<a href="registration.html">Join</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<div class="header">
+<h1>Contact Us</h1>
+<p>We are waiting for your call</p>
+</div>
+<div class="container">
+<div class="contact-info">
+<h2>Get in Touch</h2>
+<p><b>Yoga Wellness Center</b></p>
+<p>Email: lasya5754@gmail.com</p>
+<p>Phone: 6303257524</p>
+<p>Address: Bairamalguda, Hyderabad, India</p>
+<p>Working Hours: 6 AM - 8 PM</p>
+</div>
+<section class="contact">
+
+<h2>Send Message</h2>
+
+<form onsubmit="return validateForm()">
+
+<label>Name</label>
+<input type="text" id="name" placeholder="Your Name">
+
+<label>Email</label>
+<input type="email" id="email" placeholder="Your Email">
+<label>Message</label>
+<textarea id="message" placeholder="Your Message" onkeyup="countChars()"></textarea>
+<p id="charCount">0 characters</p>
+<button type="submit">Send</button>
+</form>
+</section>
+
+</div>
+
+<footer>
+© 2026 Yoga Wellness Center | Stay Healthy Stay Happy
+</footer>
+
+<script>
+
+function validateForm(){
+
+let name=document.getElementById("name").value;
+let email=document.getElementById("email").value;
+let message=document.getElementById("message").value;
+
+if(name==""){
+alert("Please enter your name");
+return false;
+}
+
+if(email==""){
+alert("Please enter your email");
+return false;
+}
+
+if(message==""){
+alert("Please write a message");
+return false;
+}
+
+alert("Thank you for contacting Yoga Wellness Center!");
+
+return true;
+
+}
+function countChars(){
+
+let message=document.getElementById("message").value;
+
+document.getElementById("charCount").innerText =
+message.length + " characters";
+
+}
+
+</script>
+
+</body>
+</html>
