@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact Me</title>
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+body{
+background:#f4f4f4;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+}
+header{
+background:black;
+padding:15px;
+text-align:center;
+}
+header a{
+color:white;
+text-decoration:none;
+margin:0 20px;
+font-size:18px;
+}
+header a:hover{
+color:#00bcd4;
+}
+.title{
+text-align:center;
+margin:40px 0 20px;
+}
+.contact-container{
+width:70%;
+margin:auto;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+form{
+display:flex;
+flex-direction:column;
+}
+label{
+margin-top:10px;
+margin-bottom:5px;
+}
+input,textarea{
+padding:10px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+textarea{
+height:120px;
+resize:none;
+}
+#count{
+font-size:14px;
+color:gray;
+margin-top:5px;
+}
+button{
+margin-top:15px;
+padding:12px;
+border:none;
+background:#00bcd4;
+color:white;
+border-radius:5px;
+font-size:16px;
+cursor:pointer;
+}
+button:hover{
+background:#0fcee3;
+}
+
+footer{
+margin-top:auto;
+background:black;
+color:white;
+text-align:center;
+padding:15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<a href="index.html">Home</a>
+<a href="About1.html">About</a>
+<a href="Project.html">Projects</a>
+<a href="contacts.html">Contact</a>
+</header>
+
+<h1 class="title">Contact Me</h1>
+
+<div class="contact-container">
+<form onsubmit="return validateForm()">
+<label>Name</label>
+<input type="text" id="name" placeholder="Enter your name">
+<label>Email</label>
+<input type="email" id="email" placeholder="Enter your email">
+
+<label>Message</label>
+<textarea id="message" placeholder="Write your message" onkeyup="countChars()"></textarea>
+
+<p id="count">0 characters</p>
+
+<button type="submit">Send Message</button>
+
+</form>
+</div>
+
+<footer>
+<p>© 2026 Lasya</p>
+</footer>
+
+<script>
+
+
+function validateForm(){
+
+let name=document.getElementById("name").value;
+let email=document.getElementById("email").value;
+let message=document.getElementById("message").value;
+if(name==""){
+alert("Please enter your name");
+return false;
+}
+if(email==""){
+alert("Please enter your email");
+return false;
+}
+if(message==""){
+alert("Please write a message");
+return false;
+}
+alert("Message sent successfully!");
+return true;
+}
+function countChars(){
+let message=document.getElementById("message").value;
+document.getElementById("count").innerText=
+message.length + " characters";
+
+}
+
+</script>
+
+</body>
+</html>
