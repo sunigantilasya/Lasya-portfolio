@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html >
+<head>
+<title>My Projects</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: white;
+}
+header {
+    background: black;
+    padding: 15px;
+    text-align: center;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+}
+
+header a:hover {
+    color: rgb(11, 136, 214);
+}
+.title {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.projects-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    
+}
+.project-card {
+    width: 280px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.project-card h2 {
+    margin-bottom: 10px;
+}
+.project-card p {
+    color:rgb(130, 124, 124);
+    margin-bottom: 15px;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgb(14, 166, 166);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #0097a7;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+</style>
+</head>
+<body>
+    <header>
+    <a href="index.html">Home</a>
+    <a href="About1.html">About</a>
+    <a href="Project.html">Projects</a>
+    <a href="contacts.html">Contact</a>
+</header>
+
+<h1 class="title">My Projects</h1>
+<br><br><br>
+<div class="projects-container">
+    <div class="project-card">
+        <h2>Yoga Center Website</h2>
+        <p>
+            A website with yogaposes page, benefits  and contact details.
+            Built using HTML and CSS.
+        </p>
+        <br>
+        <a href="description.html" class="btn">View Project</a>
+    </div>
+
+    <div class="project-card">                                  
+        <h2>Ticket Booking System</h2>
+        <p>
+            Java application to manage passengers, seats and booking details.
+        </p>
+        <br>
+        <a href="demo.html" class="btn">View Project</a>
+    </div>
+
+    <div class="project-card">
+        <h2>Portfolio Website</h2>
+        <p>
+            Personal portfolio with Home, About, Projects and Contact pages.
+        </p>
+        <br>
+        <a href="index.html" class="btn">View Project</a>
+    </div>
+
+</div>
+<footer>
+    <p>© 2026 Lasya</p>
+</footer>
+
+</body>
+</html>
